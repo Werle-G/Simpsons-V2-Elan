@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2,li,h1,h4,h3,a,article,figcaption,footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+/*----------------Body-------------*/
+
+body{
+    
+    background-color: goldenrod;
+}
+
+#container{
+    width: 75%;
+    margin:auto;
+}
+  
+/*----------------Header-------------*/
+
+h2 {
+    
+    padding: 0.5em 0;
+    text-align: center;
+    background-color: #4c8dcd;
+    color: white;
+}
+
+header figure img{
+    width: 100%;
+    border-top:  0.1em white solid;
+    border-bottom: 0.1em white solid;;
+    vertical-align: top;
+}
+
+header{
+    width: 100%;
+
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: transparent;
+}
+
+/*---------------Nav----------------*/
+
+nav{
+    /* text-align: center; */
+    background: #4c8dcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+nav ul{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    /* list-style: none; */
+}
+
+#icons{
+    cursor: pointer;
+    display: none;
+}
+
+/*-----------------Main----------------*/
+
+main{
+    width: 100%;
+    background-color: white;
+    border-top-style: dashed ;
+    padding : 2em 1em 1em 1em;
+}
+
+
+h1{
+    padding-bottom: 1em;
+    font-size: 1.5em;
+    color: goldenrod;
+}
+
+#principal{
+    width: 100%;
+    padding-top: 2em;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+article{
+    width: 70%;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+}
+
+article p{
+    margin-bottom: 1em;
+    text-align: justify;
+    color: black;
+}
+
+#affiches {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* flex-grow: 1; */
+    /* gap: 30px; */
+}
+
+.movie{
+    width: 100%;
+    height: 100%;
+}
+
+#affiches > figure {
+    width: 30%;
+ 
+}
+
+.movie> img{
+    width: 100%;
+    height: 90%;
+    border: 0.1em solid;
+    overflow: hidden;
+    object-position: 50% 30% ;
+    object-fit: cover;
+}
+
+
+
+/*--------------Aside------------*/
+
+aside figure img {
+    width: 70%;
+    border: 3px solid white;  
+}
+
+h3{
+    font-size:1em;
+    text-align: center;
+    color: white;
+}
+
+h4{
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+}
+
+figcaption p{
+    font-size: smaller;
+    text-align: justify;
+    padding: 0.5em 0;
+    color: white
+}
+
+aside{
+    width: 30%;
+    padding-top: 3.5em;
+    text-align: center;
+}
+
+aside figure{
+    padding: 0.5em;
+    background-color: #4c8dcd;
+}
+
+/*------------footer------------*/
+
+footer{
+    background-color: #29539d;
+    text-align: center;
+    padding:0.5em 0 
+}
+
+small{
+    width: 100%;
+    font-size: small;
+    color: white;
+}
+
+/* --------------media queries----------------------*/
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (max-width : 320px) {
+
+    #container{
+        width: 100%;
+    }
+    
+    nav{
+        width: 100%;
+    }
+    
+    #icons{
+        display: block;
+    }
+
+    #icons:before{
+        content: "\2630";
+    }
+
+    .active #icons:before{
+        content: "\2715"
+    }
+
+    nav ul{
+        position:static;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background: #4c8dcd;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+
+    nav li{
+        padding: 3px 0;
+    }
+
+    nav li:hover{
+        background:#3582cf
+    }
+    
+    nav.active ul{
+        left:0;
+    }        
+
+    #principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article{
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 1em;
+        display: flex;
+        align-items: center;
+    }
+
+    #affiches{
+        width: 100%;
+    }
+
+    #affiches > figure{
+        width: 100%;
+        height: 90%;
+    }
+
+    #affiches > figure > img{
+        width: 100%;
+        height: 90%;
+        border: 0.1em solid;
+        overflow: hidden;
+        object-position: 50% 30% ;
+        object-fit: cover;  
+    }
+
+    #affiches>figure:nth-child(1) {
+        display: none;
+    }
+
+    #affiches>figure:nth-child(2) {
+        display: none;
+    }
+
+    aside{
+        width: 100%;
+        padding-top: 0;
+    }
+}
